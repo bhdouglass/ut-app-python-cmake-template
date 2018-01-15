@@ -6,5 +6,6 @@ execute_process(
 
 set(LIB_DIR "/lib/${ARCH_TRIPLET}")
 
-install(DIRECTORY io DESTINATION ${LIB_DIR})
-install(FILES libpython3.4m.so.1 libpython3.4m.so.1.0 DESTINATION ${LIB_DIR})
+install(DIRECTORY ${ARCH_TRIPLET}/io DESTINATION ${LIB_DIR})
+install(FILES ${ARCH_TRIPLET}/libpython3.4m.so.1 DESTINATION ${LIB_DIR})
+install(FILES ${ARCH_TRIPLET}/libpython3.4m.so.1.0 DESTINATION ${LIB_DIR})

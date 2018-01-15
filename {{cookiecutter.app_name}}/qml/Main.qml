@@ -1,7 +1,7 @@
 import QtQuick 2.4
 import QtQuick.Layouts 1.1
 import Ubuntu.Components 1.3
-import io.thp.pyotherside 1.4
+import io.thp.pyotherside 1.2
 
 MainView {
     id: root
