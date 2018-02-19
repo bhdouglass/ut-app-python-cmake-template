@@ -61,3 +61,17 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${DESKTOP_FILE_NAME} DESTINATION ${DAT
 
 add_subdirectory(po)
 add_subdirectory(python-lib)
+
+# Make source files visible in qtcreator
+file(GLOB_RECURSE PROJECT_SRC_FILES
+    RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
+    qml/*.qml
+    qml/*.js
+    qml/*.py
+    *.json
+    *.json.in
+    *.apparmor
+    *.desktop.in
+)
+
+add_custom_target(${PROJECT_NAME}_FILES ALL SOURCES ${PROJECT_SRC_FILES})
